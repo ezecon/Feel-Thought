@@ -71,7 +71,7 @@
         </div>
     </div>
 
-    <script>
+       <script>
         document.getElementById("tags").addEventListener("change", function() {
             var emotion = this.value;
             var weatherSection = document.getElementById("weather");
@@ -112,6 +112,38 @@
                     weatherHeading.textContent = "Help me feel";
                     weatherText.textContent = "Allahumma Ij3al fee qalbee noora, wa fee lisaanee noora, wa ij3al fee sam3ee noora, wa ij3al fee baSaree noora, wa ij3al min khalfee noora, wa min amaamee noora, wa ij3al min fawqee nooraa, wa mmin tahtee noora, Allahumma a3Tinee noora.";
                     weatherText1.textContent = "Oh Allah! Place in my heart, Light. Place in my tongue, Light. Place in my hearing, Light. Place in my sight, Light. Place behind me, Light. Place before me, Light. Place above me, Light. Place under me, Light. Oh Allah grant me Light!";
+                    break;
+
+                //-------------------------------------------------------------------------------------
+                case "content":
+                    weatherHeading.textContent = "Keep me happy";
+                    weatherText.textContent = "Allahumma inni a'udhu bika min zawali ni'matika, wa tahawwuli 'afiyatika, wa fuja'ati niqmatika, wa jami'i sakhatika";
+                    weatherText1.textContent = "O Allah! I seek refuge in You from the decline of Your blessings, the passing of safety, the sudden onset of Your punishment and from all that displeases you.";
+                    break;
+                case "curious":
+                    weatherHeading.textContent = "I can't trust myself";
+                    weatherText.textContent = "Allahumma innee a3uzubika min sharri sam3ee, wa min sharri baSaree, wa min sharri lisaanee, wa min sharri qalbee, wa min sharri minnee.";
+                    weatherText1.textContent = "Oh Allah, I seek protection in you from the evil of my hearing, from the evil of my sight, from the evil of my tongue, from the evil of my heart, and from the evil of myself.";
+                    break;
+                case "defeated":
+                    weatherHeading.textContent = "I messed up";
+                    weatherText.textContent = "Allahumma Innee Dhalamtu nafsee Dhulman Kaseeran, Wa la yagfiru alZunuba illaa anta, fa igfirlee magfiratan min 3ndik, Wa Arhimnee, Innaka ant algafuur arraheem.";
+                    weatherText1.textContent = "O Allah, I have been very unjust to myself and no one grants pardon against sin but You, therefore forgive me with Your forgiveness and have mercy on me. Surely, You are the forgiver, the Merciful.";
+                    break;
+                case "depressed":
+                    weatherHeading.textContent = "To Light";
+                    weatherText.textContent = "Allahumma Akhrijnee min aldulumaat ilaa alnur";
+                    weatherText1.textContent = "Oh Allah take me out of darkness and into the light.";
+                    break;
+                case "desire":
+                    weatherHeading.textContent = "Fire Alarm";
+                    weatherText.textContent = "Allahumma iTfa' naara ash-shahawaati min qalbee, wa aSrid 3anhu kulla shay' la yardeek";
+                    weatherText1.textContent = "Oh Allah! Extinguish the fire of desires in my heart and redirect my heart to all that which pleases you.";
+                    break;
+                case "confused":
+                    weatherHeading.textContent = "You are the Lord of the weak";
+                    weatherText.textContent = "Allahuma ilayka ashku da'fa quwwati wa qillata heelatee wa hawanee 3ala an-naas ya arhamur rahimeen annta Rabbul mustad'afeen wa anta rabbi";
+                    weatherText1.textContent = "To You, my Lord, I complain of my weakness, lack of support and the humiliation I am made to receive. Most Compassionate and Merciful! You are the Lord of the weak, and you are my Lord.To You, my Lord, I complain of my weakness, lack of support and the humiliation I am made to receive. Most Compassionate and Merciful! You are the Lord of the weak, and you are my Lord.";
                     break;
 
                 // Add cases for other emotions
