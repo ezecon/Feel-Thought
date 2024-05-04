@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Application</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Asset/css/style.css">
+</head>
+<body>
+  <video id="video-background" autoplay muted loop>
+    <source src="images/1.mp4" type="video/mp4">
+  </video>
+    <div class="card">
+        <div class="select" id="search">
+            <h1>I&#39;m feeling</h1>
+            <select name="tags" id="tags">
+            <option value="">[Select Emotion]</option>
+            <option value="angry">angry</option>
+            <option value="anticipation">anticipation</option>
+            <option value="anxious">anxious</option>
+            <option value="aroused">aroused</option>
+            <option value="confident">confident</option>
+            <option value="confused">confused</option>
+            <option value="content">content</option>
+            <option value="curious">curious</option>
+            <option value="defeated">defeated</option>
+            <option value="depressed">depressed</option>
+            <option value="desire">desire</option>
+            <option value="desperate">desperate</option>
+            <option value="determined">determined</option>
+            <option value="disbelief">disbelief</option>
+            <option value="doubtful">doubtful</option>
+            <option value="envious">envious</option>
+            <option value="grateful">grateful</option>
+            <option value="guilty">guilty</option>
+            <option value="happy">happy</option>
+            <option value="hatred">hatred</option>
+            <option value="humiliated">humiliated</option>
+            <option value="hurt">hurt</option>
+            <option value="impatient">impatient</option>
+            <option value="indecisive">indecisive</option>
+            <option value="insecure">insecure</option>
+            <option value="irritated">irritated</option>
+            <option value="jealous">jealous</option>
+            <option value="lazy">lazy</option>
+            <option value="lonely">lonely</option>
+            <option value="love">love</option>
+            <option value="nervous">nervous</option>
+            <option value="nostalgic">nostalgic</option>
+            <option value="offended">offended</option>
+            <option value="overwhelmed">overwhelmed</option>
+            <option value="peaceful">peaceful</option>
+            <option value="rage">rage</option>
+            <option value="regretful">regretful</option>
+            <option value="sad">sad</option>
+            <option value="satisfied">satisfied</option>
+            <option value="uncertain">uncertain</option>
+            <option value="uneasy">uneasy</option>
+            <option value="weak">weak</option></select>
+        </div>
+
+        <div class="weather" id="weather">
+            <h2 id="weather-heading">Head</h2>
+            <p id="weather-text">
+                <!-- Weather text will be displayed here -->
+            </p>
+            <p id="weather-text1">
+                <!-- Weather text will be displayed here -->
+            </p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("tags").addEventListener("change", function() {
+            var emotion = this.value;
+            var weatherSection = document.getElementById("weather");
+            var weatherHeading = document.getElementById("weather-heading");
+            var weatherText = document.getElementById("weather-text");
+            var weatherText1 = document.getElementById("weather-text1");
+
+            weatherSection.style.display = "block";
+
+
+            switch(emotion) {
+                case "angry":
+                    weatherHeading.textContent = "Extinguish";
+                    weatherText.textContent = "Allahumma azhib Gaydha Qalbee.";
+                    weatherText1.textContent = "Oh Allah, remove anger from my heart.";
+                    break;
+                case "anticipation":
+                    weatherHeading.textContent = "Ease Destiny";
+                    weatherText.textContent = "Allahumma in kaana haaza alAmr khayran lee fa iQdirhu lee wa yassirhu lee summa baarik lee feehi.";
+                    weatherText1.textContent = "Oh Allah, if my intended action is best for me, make it destined and easy for me, and grant me Your Blessings in it.";
+                    break;
+                case "anxious":
+                    weatherHeading.textContent = "Productivity Energy Drink";
+                    weatherText.textContent = "Allahumma innee a3uzubika min alham wa alhuzn wa al3ajz wa alkusl wa albukhl wa aljubn wa galbah aldayn wa Galbah alrijaal.";
+                    weatherText1.textContent = "O Allah, I take refuge in You from anxiety and sorrow, weakness and laziness, miserliness and cowardice, the burden of debts and from being over powered by men.";
+                    break;
+                case "aroused":
+                    weatherHeading.textContent = "Fire Alarm";
+                    weatherText.textContent = "Allahumma iTfa' naara ash-shahawaati min qalbee, wa aSrid 3anhu kulla shay' la yardeek";
+                    weatherText1.textContent = "Oh Allah! Extinguish the fire of desires in my heart and redirect my heart to all that which pleases you.";
+                    break;
+                case "confident":
+                    weatherHeading.textContent = "No half victories";
+                    weatherText.textContent = "Ya Rabb, izaa a3Taytanee maalan falaa ta'khuz sa3aadatee, wa izaa a3Taytanee quwwah falaa ta'khuz 3qalee, wa izaa a3Taytanee najaaHan falaa ta'khuz tawaaDa3ee, wa izaa a3Taytanee tawaaDi3aan falaa ta'khuzu i3tizaazee bi kiraamatee.";
+                    weatherText1.textContent = "Oh Lord! When you give me wealth, do not take away my happiness. When you give me strength, do not take away my intelligence. When you give me victory, do not take away my humility. When you give me humility, do not take away my dignity.";
+                    break;
+                case "confused":
+                    weatherHeading.textContent = "Help me feel";
+                    weatherText.textContent = "Allahumma Ij3al fee qalbee noora, wa fee lisaanee noora, wa ij3al fee sam3ee noora, wa ij3al fee baSaree noora, wa ij3al min khalfee noora, wa min amaamee noora, wa ij3al min fawqee nooraa, wa mmin tahtee noora, Allahumma a3Tinee noora.";
+                    weatherText1.textContent = "Oh Allah! Place in my heart, Light. Place in my tongue, Light. Place in my hearing, Light. Place in my sight, Light. Place behind me, Light. Place before me, Light. Place above me, Light. Place under me, Light. Oh Allah grant me Light!";
+                    break;
+
+                // Add cases for other emotions
+                default:
+                    weatherSection.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
