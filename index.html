@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Application</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Asset/css/style.css">
+</head>
+<body>
+  <video id="video-background" autoplay muted loop>
+    <source src="images/1.mp4" type="video/mp4">
+  </video>
+    <div class="card">
+        <div class="select" id="search">
+            <h1>I&#39;m feeling</h1>
+            <select name="tags" id="tags">
+            <option value="">[Select Emotion]</option>
+            <option value="angry">angry</option>
+            <option value="anticipation">anticipation</option>
+            <option value="anxious">anxious</option>
+            <option value="aroused">aroused</option>
+            <option value="confident">confident</option>
+            <option value="confused">confused</option>
+            <option value="content">content</option>
+            <option value="curious">curious</option>
+            <option value="defeated">defeated</option>
+            <option value="depressed">depressed</option>
+            <option value="desire">desire</option>
+            <option value="desperate">desperate</option>
+            <option value="determined">determined</option>
+            <option value="disbelief">disbelief</option>
+            <option value="doubtful">doubtful</option>
+            <option value="envious">envious</option>
+            <option value="grateful">grateful</option>
+            <option value="guilty">guilty</option>
+            <option value="happy">happy</option>
+            <option value="hatred">hatred</option>
+            <option value="humiliated">humiliated</option>
+            <option value="hurt">hurt</option>
+            <option value="impatient">impatient</option>
+            <option value="indecisive">indecisive</option>
+            <option value="insecure">insecure</option>
+            <option value="irritated">irritated</option>
+            <option value="jealous">jealous</option>
+            <option value="lazy">lazy</option>
+            <option value="lonely">lonely</option>
+            <option value="love">love</option>
+            <option value="nervous">nervous</option>
+            <option value="nostalgic">nostalgic</option>
+            <option value="offended">offended</option>
+            <option value="overwhelmed">overwhelmed</option>
+            <option value="peaceful">peaceful</option>
+            <option value="rage">rage</option>
+            <option value="regretful">regretful</option>
+            <option value="sad">sad</option>
+            <option value="satisfied">satisfied</option>
+            <option value="uncertain">uncertain</option>
+            <option value="uneasy">uneasy</option>
+            <option value="weak">weak</option></select>
+        </div>
+
+        <div class="weather" id="weather">
+            <h2 id="weather-heading">Head</h2>
+            <p id="weather-text0" class="arabic">
+                <!-- Weather text will be displayed here -->
+            </p>
+            <p id="weather-text">
+                <!-- Weather text will be displayed here -->
+            </p>
+            <p id="weather-text1">
+                <!-- Weather text will be displayed here -->
+            </p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("tags").addEventListener("change", function() {
+            var emotion = this.value;
+            var weatherSection = document.getElementById("weather");
+            var weatherHeading = document.getElementById("weather-heading");
+            var weatherText = document.getElementById("weather-text");
+            var weatherText0 = document.getElementById("weather-text0");
+            var weatherText1 = document.getElementById("weather-text1");
+
+            weatherSection.style.display = "block";
+
+
+            switch(emotion) {
+                case "angry":
+                    weatherHeading.textContent = "Extinguish";
+                    weatherText0.textContent = "اللَّهُمَّ أَذْهِبْ غَيْظَ قَلْبِي";
+                    weatherText.textContent = "Allahumma azhib Gaydha Qalbee.";
+                    weatherText1.textContent = "Oh Allah, remove anger from my heart.";
+                    break;
+                case "rage":
+                    weatherHeading.textContent = "Extinguish";
+                    weatherText0.textContent = "اللَّهُمَّ أَذْهِبْ غَيْظَ قَلْبِي";
+                    weatherText.textContent = "Allahumma azhib Gaydha Qalbee.";
+                    weatherText1.textContent = "Oh Allah, remove anger from my heart.";
+                    break;
+                case "anticipation":
+                    weatherHeading.textContent = "Ease Destiny";
+                    weatherText0.textContent = "اللهم إن كان هذا الأمر خيرا لي فَاقْدُرْهُ لِي وَيَسِّرْهُ لِي ثُمَّ بَارِكْ لِي فِيهِ";
+                    weatherText.textContent = "Allahumma in kaana haaza alAmr khayran lee fa iQdirhu lee wa yassirhu lee summa baarik lee feehi.";
+                    weatherText1.textContent = "Oh Allah, if my intended action is best for me, make it destined and easy for me, and grant me Your Blessings in it.";
+                    break;
+                case "indecisive":
+                    weatherHeading.textContent = "Ease Destiny";
+                    weatherText0.textContent = "اللهم إن كان هذا الأمر خيرا لي فَاقْدُرْهُ لِي وَيَسِّرْهُ لِي ثُمَّ بَارِكْ لِي فِيهِ";
+                    weatherText.textContent = "Allahumma in kaana haaza alAmr khayran lee fa iQdirhu lee wa yassirhu lee summa baarik lee feehi.";
+                    weatherText1.textContent = "Oh Allah, if my intended action is best for me, make it destined and easy for me, and grant me Your Blessings in it.";
+                    break;
+                case "doubtful":
+                    weatherHeading.textContent = "Ease Destiny";
+                    weatherText0.textContent = "اللهم إن كان هذا الأمر خيرا لي فَاقْدُرْهُ لِي وَيَسِّرْهُ لِي ثُمَّ بَارِكْ لِي فِيهِ";
+                    weatherText.textContent = "Allahumma in kaana haaza alAmr khayran lee fa iQdirhu lee wa yassirhu lee summa baarik lee feehi.";
+                    weatherText1.textContent = "Oh Allah, if my intended action is best for me, make it destined and easy for me, and grant me Your Blessings in it.";
+                    break;
+                case "anxious":
+                    weatherHeading.textContent = "Windex for Negativity";
+                    weatherText0.textContent = " اللهم اغسلني من السلبية ";
+                    weatherText.textContent = "Allahumma iGsilnee min assalbiyah";
+                    weatherText1.textContent = "Oh Allah wash away my negativity.";
+                    break;
+                case "uncertain":
+                    weatherHeading.textContent = "Windex for Negativity";
+                    weatherText0.textContent = " اللهم اغسلني من السلبية ";
+                    weatherText.textContent = "Allahumma iGsilnee min assalbiyah";
+                    weatherText1.textContent = "Oh Allah wash away my negativity.";
+                    break;
+                case "aroused":
+                    weatherHeading.textContent = "Fire Alarm";
+                    weatherText0.textContent = "اللهم اطفئ نار الشهوات من قلبى ، واصرف عنه كل شئ لا يرضيك عنى";
+                    weatherText.textContent = "Allahumma iTfa' naara ash-shahawaati min qalbee, wa aSrid 3anhu kulla shay' la yardeek";
+                    weatherText1.textContent = "Oh Allah! Extinguish the fire of desires in my heart and redirect my heart to all that which pleases you.";
+                    break;
+                case "confident":
+                    weatherHeading.textContent = "No half victories";
+                    weatherText0.textContent = "يا رَبْ إذا أعطيتني مَالاً فلا تأخذ سَعادتي، وإذا أعَطيتني قوّة فلا تأخذ عقليْ، وإذا أعَطيتني نجَاحاً فلا تأخذ تَواضعْي وإذا أعطيتني تواضعاً فلا تأخذ اعتزازي بِكرامتي، ";
+                    weatherText.textContent = "Ya Rabb, izaa a3Taytanee maalan falaa ta'khuz sa3aadatee, wa izaa a3Taytanee quwwah falaa ta'khuz 3qalee, wa izaa a3Taytanee najaaHan falaa ta'khuz tawaaDa3ee, wa izaa a3Taytanee tawaaDi3aan falaa ta'khuzu i3tizaazee bi kiraamatee.";
+                    weatherText1.textContent = "Oh Lord! When you give me wealth, do not take away my happiness. When you give me strength, do not take away my intelligence. When you give me victory, do not take away my humility. When you give me humility, do not take away my dignity.";
+                    break;
+                case "confused":
+                    weatherHeading.textContent = "Help me feel";
+                    weatherText0.textContent = "اللهمّ اجعل في قلبي نوراً، وفي لساني نوراً، واجعل في سمعي نوراً، واجعل في بصري نوراً، واجعل من خلفي ‏نوراً، ومن أمامي نوراً، واجعل من فوقي نوراً، ومن تحتي نوراً، اللهمّ أعطني نوراً";
+                    weatherText.textContent = "Allahumma Ij3al fee qalbee noora, wa fee lisaanee noora, wa ij3al fee sam3ee noora, wa ij3al fee baSaree noora, wa ij3al min khalfee noora, wa min amaamee noora, wa ij3al min fawqee nooraa, wa mmin tahtee noora, Allahumma a3Tinee noora.";
+                    weatherText1.textContent = "Oh Allah! Place in my heart, Light. Place in my tongue, Light. Place in my hearing, Light. Place in my sight, Light. Place behind me, Light. Place before me, Light. Place above me, Light. Place under me, Light. Oh Allah grant me Light!";
+                    break;
+
+                //-------------------------------------------------------------------------------------
+                case "content":
+                    weatherHeading.textContent = "Keep me happy";
+                    weatherText0.textContent = "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ زَوَالِ نِعْمَتِكَ، وَتَحَوُّلِ عَافِيَتِكَ، وَفُجَاءَةِ نِقْمَتِكَ، وَجَمِيعِ سَخَطِكَ";
+                    weatherText.textContent = "Allahumma inni a'udhu bika min zawali ni'matika, wa tahawwuli 'afiyatika, wa fuja'ati niqmatika, wa jami'i sakhatika";
+                    weatherText1.textContent = "O Allah! I seek refuge in You from the decline of Your blessings, the passing of safety, the sudden onset of Your punishment and from all that displeases you.";
+                    break;
+                case "happy":
+                    weatherHeading.textContent = "Keep me happy";
+                    weatherText0.textContent = "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ زَوَالِ نِعْمَتِكَ، وَتَحَوُّلِ عَافِيَتِكَ، وَفُجَاءَةِ نِقْمَتِكَ، وَجَمِيعِ سَخَطِكَ";
+                    weatherText.textContent = "Allahumma inni a'udhu bika min zawali ni'matika, wa tahawwuli 'afiyatika, wa fuja'ati niqmatika, wa jami'i sakhatika";
+                    weatherText1.textContent = "O Allah! I seek refuge in You from the decline of Your blessings, the passing of safety, the sudden onset of Your punishment and from all that displeases you.";
+                    break;
+                case "peaceful":
+                    weatherHeading.textContent = "Keep me happy";
+                    weatherText0.textContent = "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ زَوَالِ نِعْمَتِكَ، وَتَحَوُّلِ عَافِيَتِكَ، وَفُجَاءَةِ نِقْمَتِكَ، وَجَمِيعِ سَخَطِكَ";
+                    weatherText.textContent = "Allahumma inni a'udhu bika min zawali ni'matika, wa tahawwuli 'afiyatika, wa fuja'ati niqmatika, wa jami'i sakhatika";
+                    weatherText1.textContent = "O Allah! I seek refuge in You from the decline of Your blessings, the passing of safety, the sudden onset of Your punishment and from all that displeases you.";
+                    break;
+                case "satisfied":
+                    weatherHeading.textContent = "Keep me happy";
+                    weatherText0.textContent = "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ زَوَالِ نِعْمَتِكَ، وَتَحَوُّلِ عَافِيَتِكَ، وَفُجَاءَةِ نِقْمَتِكَ، وَجَمِيعِ سَخَطِكَ";
+                    weatherText.textContent = "Allahumma inni a'udhu bika min zawali ni'matika, wa tahawwuli 'afiyatika, wa fuja'ati niqmatika, wa jami'i sakhatika";
+                    weatherText1.textContent = "O Allah! I seek refuge in You from the decline of Your blessings, the passing of safety, the sudden onset of Your punishment and from all that displeases you.";
+                    break;
+                case "curious":
+                    weatherHeading.textContent = "I can't trust myself";
+                    weatherText0.textContent="اللهم إني أعوذ بك من شر سمعي، ومن شر بصري، ومن شر لساني، ومن شر قلبي، ومن شر منيي";
+                    weatherText.textContent = "Allahumma innee a3uzubika min sharri sam3ee, wa min sharri baSaree, wa min sharri lisaanee, wa min sharri qalbee, wa min sharri minnee.";
+                    weatherText1.textContent = "Oh Allah, I seek protection in you from the evil of my hearing, from the evil of my sight, from the evil of my tongue, from the evil of my heart, and from the evil of myself.";
+                    break;
+                case "defeated":
+                    weatherHeading.textContent = "I messed up";
+                    weatherText0.textContent = "اللهمّ إنّي ظلمت نفسي ظلماً كثيراً، ولا يغفر الذّنوب إلا أنت فاغفر لي مغفرة من عندك، وارحمني إنّك أنت الغفور الرّحيم";
+                    weatherText.textContent = "Allahumma Innee Dhalamtu nafsee Dhulman Kaseeran, Wa la yagfiru alZunuba illaa anta, fa igfirlee magfiratan min 3ndik, Wa Arhimnee, Innaka ant algafuur arraheem.";
+                    weatherText1.textContent = "O Allah, I have been very unjust to myself and no one grants pardon against sin but You, therefore forgive me with Your forgiveness and have mercy on me. Surely, You are the forgiver, the Merciful.";
+                    break;
+                case "regretful":
+                    weatherHeading.textContent = "I messed up";
+                    weatherText0.textContent = "اللهمّ إنّي ظلمت نفسي ظلماً كثيراً، ولا يغفر الذّنوب إلا أنت فاغفر لي مغفرة من عندك، وارحمني إنّك أنت الغفور الرّحيم";
+                    weatherText.textContent = "Allahumma Innee Dhalamtu nafsee Dhulman Kaseeran, Wa la yagfiru alZunuba illaa anta, fa igfirlee magfiratan min 3ndik, Wa Arhimnee, Innaka ant algafuur arraheem.";
+                    weatherText1.textContent = "O Allah, I have been very unjust to myself and no one grants pardon against sin but You, therefore forgive me with Your forgiveness and have mercy on me. Surely, You are the forgiver, the Merciful.";
+                    break;
+                case "depressed":
+                    weatherHeading.textContent = "To Light";
+                    weatherText0.textContent="اللهم اخرجني من الظلمات إلى النور";
+                    weatherText.textContent = "Allahumma Akhrijnee min aldulumaat ilaa alnur";
+                    weatherText1.textContent = "Oh Allah take me out of darkness and into the light.";
+                    break;
+                case "desire":
+                    weatherHeading.textContent = "Fire Alarm";
+                    weatherText0.textContent = "اللهم اطفئ نار الشهوات من قلبى ، واصرف عنه كل شئ لا يرضيك عنى";
+                    weatherText.textContent = "Allahumma iTfa' naara ash-shahawaati min qalbee, wa aSrid 3anhu kulla shay' la yardeek";
+                    weatherText1.textContent = "Oh Allah! Extinguish the fire of desires in my heart and redirect my heart to all that which pleases you.";
+                case "disbelief":
+                    weatherHeading.textContent = "Fill my heart";
+                    weatherText0.textContent="اللهم املأ قلبى بحبك";
+                    weatherText.textContent = "Allahumma imla' qalbee bihubbik.";
+                    weatherText1.textContent = "Oh Allah fill my heart with your love.";
+                    break;
+                case "overwhelmed":
+                    weatherHeading.textContent = "You are the Lord of the weak";
+                    weatherText0.textContent ="اللهم إليك أشكو ضعف قوتي وقلة حيلتي وهواني على الناس يا أرحم الراحمين أنت ربُّ المستضعفين وانت ربّي";
+                    weatherText.textContent = "Allahuma ilayka ashku da'fa quwwati wa qillata heelatee wa hawanee 3ala an-naas ya arhamur rahimeen annta Rabbul mustad'afeen wa anta rabbi";
+                    weatherText1.textContent = "To You, my Lord, I complain of my weakness, lack of support and the humiliation I am made to receive. Most Compassionate and Merciful! You are the Lord of the weak, and you are my Lord.To You, my Lord, I complain of my weakness, lack of support and the humiliation I am made to receive. Most Compassionate and Merciful! You are the Lord of the weak, and you are my Lord.";
+                    break;
+                case "humiliated":
+                    weatherHeading.textContent = "You are the Lord of the weak";
+                    weatherText0.textContent ="اللهم إليك أشكو ضعف قوتي وقلة حيلتي وهواني على الناس يا أرحم الراحمين أنت ربُّ المستضعفين وانت ربّي";
+                    weatherText.textContent = "Allahuma ilayka ashku da'fa quwwati wa qillata heelatee wa hawanee 3ala an-naas ya arhamur rahimeen annta Rabbul mustad'afeen wa anta rabbi";
+                    weatherText1.textContent = "To You, my Lord, I complain of my weakness, lack of support and the humiliation I am made to receive. Most Compassionate and Merciful! You are the Lord of the weak, and you are my Lord.To You, my Lord, I complain of my weakness, lack of support and the humiliation I am made to receive. Most Compassionate and Merciful! You are the Lord of the weak, and you are my Lord.";
+                    break;
+                case "desperate":
+                    weatherHeading.textContent = "You are the Lord of the weak";
+                    weatherText0.textContent ="اللهم إليك أشكو ضعف قوتي وقلة حيلتي وهواني على الناس يا أرحم الراحمين أنت ربُّ المستضعفين وانت ربّي";
+                    weatherText.textContent = "Allahuma ilayka ashku da'fa quwwati wa qillata heelatee wa hawanee 3ala an-naas ya arhamur rahimeen annta Rabbul mustad'afeen wa anta rabbi";
+                    weatherText1.textContent = "To You, my Lord, I complain of my weakness, lack of support and the humiliation I am made to receive. Most Compassionate and Merciful! You are the Lord of the weak, and you are my Lord.To You, my Lord, I complain of my weakness, lack of support and the humiliation I am made to receive. Most Compassionate and Merciful! You are the Lord of the weak, and you are my Lord.";
+                    break;
+  //-------------------------------------------------------------------------------------
+                case "lonely":
+                    weatherHeading.textContent = "Don't leave me";
+                    weatherText0.textContent = " اللهُمَّ رَحْمَتَكَ أرجُو، فَلا تَكِلْنِي إلى نَفْسي طَرْفَةَ عَيْنٍ، وأصْلِحْ لي شَأني كُلَّهُ، لا إله إلا أنْتَ.";
+                    weatherText.textContent = " Allahumma Rahmataka Arjuu. Falaa takilnee ilaa nafsee Tarfata Ayn. Wa AsliH lee Shanee kullahu, laa ilaah illa ant.";
+                    weatherText1.textContent = "O Allah, it is Your mercy that I hope for, so do not leave me in charge of my affairs even for a blink of an eye, and rectify for me all of my affairs. None has the right to be worshiped except You.";
+                    break;
+                case "nervous":
+                    weatherHeading.textContent = "Untie The Knot";
+                    weatherText0.textContent = "رَبِّ اشْرَحْ لِي صَدْرِي وَيَسِّرْ لِي أَمْرِي وَاحْلُلْ عُقْدَةً مِّن لِّسَانِي يَفْقَهُوا قَوْلِي";
+                    weatherText.textContent = "Rabbi IshraHlee Sadree, wa yassirlee amree, waHlul Uqdatan min lisaanee, yafqahuu qawlee.";
+                    weatherText1.textContent = "Oh lord, expand my chest, ease my affair, and untie the knot in my tongue and perfect my expression.";
+                    break;
+                case "hurt":
+                    weatherHeading.textContent = "Mend Me";
+                    weatherText0.textContent = "ياجبار اجبرني";
+                    weatherText.textContent = "  Ya Jabbaar, Ijbirnee.";
+                    weatherText1.textContent = "Oh Mender, Mend me.";
+                    break;
+                case "sad":
+                    weatherHeading.textContent = "State of Mind";
+                    weatherText0.textContent = "اللهمّ فارج الهم، كاشف الغم، مذهب الحزن، اكشف اللهمّ عنّي همّي وغمّي ، وأذهب عنّي حزني";
+                    weatherText.textContent = " Allahumma Faarij alhamm, kaashif alGamm, muzhib alhuzn, ikshif Allahumma 3annee hammee wa Gammee, wa azhib 3annee huznee";
+                    weatherText1.textContent = "Oh Allah, Reliever of anxiety, Remover of distress, Dispeller of grief! Remove my anxiety, distress, and dispel from me my sadness.";
+                    break;
+                case "guilty":
+                    weatherHeading.textContent = "Clean Slate";
+                    weatherText0.textContent = "يارب أمسح على صدري برحمتك";
+                    weatherText.textContent = "Ya Rabb, ImsaH Sadree biraHmatik";
+                    weatherText1.textContent = "Oh Lord, wipe my chest clean with your mercy.";
+                    break;
+                case "lazy":
+                    weatherHeading.textContent = "Productivity Energy Drink";
+                    weatherText0.textContent = "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ الْهَمِّ وَالْحُزْنِ وَالْعَجْزِ وَالْكَسَلِ وَالْبُخْلِ وَالْجُبْنِ وَضَلَعِ الدَّيْنِ وَغَلَبَةِ الرِّجَالِ";
+                    weatherText.textContent = "Allahumma innee a3uzubika min alham wa alhuzn wa al3ajz wa alkusl wa albukhl wa aljubn wa galbah aldayn wa Galbah alrijaal.";
+                    weatherText1.textContent = "O Allah, I take refuge in You from anxiety and sorrow, weakness and laziness, miserliness and cowardice, the burden of debts and from being over powered by men.";
+                    break;
+                case "insecure":
+                    weatherHeading.textContent = "The potential within";
+                    weatherText0.textContent = "اللهم اجعلني أرى المواهب و نقاط قوت الذين وضعته في نفسي";
+                    weatherText.textContent = "Allahumma ij3alnee araa almawaahib wa nuQaaT quwwat allazeena wada3tahu fee nafsee";
+                    weatherText1.textContent = "Oh Allah, make me see the talents and strengths you have put inside of me.";
+                    break;
+                case "weak":
+                    weatherHeading.textContent = "You are my Lord";
+                    weatherText0.textContent = "اَللّهمَّ إِلَيْكَ أَشْكُوْ ضُعْفَ قُوَّتِيْ ، وَقِلَّةَ حِيْلَتِيْ ، وَهَوَانِيْ عَلَى النَّاسِ ، يَا أَرْحَمَ الرَّاحِمِيْنَ ، أَنْتَ رَبُّ الْمُسْتَضْعَفِيْنَ ، وَأَنْتَ رَبِّي";
+                    weatherText.textContent = "Allahuma inni ashku ilayka du'fa quwati wa qilata heelati wa hawaani ala annaas. yaa arham araahimin, anta rab almustadafeena wa anta rabi";
+                    weatherText1.textContent = "Oh, Allah, I appeal to you for the weakness in my strength, and my limited power, and the treatment of contempt and humiliation from people. To you, the most Merciful of all the Merciful ones, you are the Lord of the oppressed, and you are my Lord.";
+                    break;
+                case "offended":
+                    weatherHeading.textContent = "The Words Run Wild In Here";
+                    weatherText0.textContent = "ْاللهم إنِّي أَعُوْذُ بِكَ مِنْ هَمِّ يَحْزُنُنِي وَمِنْ فِكْرِ يُقْلِقُنِيْ وَعِلْمَا يُتْعِبُنِيْ وَشَخْصَا يَحْمِلُ خُبْثَا لِي";
+                    weatherText.textContent = "Allahumma innee a'uzubika min ham ayhzununee, wa min fikr yuqliqunee, wa 3ilm yut3ibunee, wa shakhS yahmilu khubsan-lee";
+                    weatherText1.textContent = "Oh Allah! I seek your shelter from worries that sadden me, thoughts that make me restless, information that bothers me, and people that intend bad for me.";
+                    break;
+                case "hatred":
+                    weatherHeading.textContent = "Hate-Extermination";
+                    weatherText0.textContent = "اللهم لا تجعل في قلبي كراهية لأحد";
+                    weatherText.textContent = "Allahumma laa taj3al fee qalbee karaahiyyah li aHad.";
+                    weatherText1.textContent = "Oh Allah, don't let the hate of anyone reside in my heart.";
+                    break;
+                case "nostalgic":
+                    weatherHeading.textContent = "Weak Heart";
+                    weatherText0.textContent = "اللهم لَا تُعَلِّقْ قَلْبِي الضِّعِيفِ بِمَا لَيسَ لِي";
+                    weatherText.textContent = "Allahumma La Tu3alliq Qalbee AlDa3eef bimaa laysa lee";
+                    weatherText1.textContent = "Oh Allah, don't let my weak heart get attached with what's not mine.";
+                    break;
+                case "jealous":
+                    weatherHeading.textContent = "No Hard Feelings";
+                    weatherText0.textContent = "اللهم طهر قلبي من كل سوء ، اللهم طهر قلبي من كل ما يبغضك، اللهم طهر قلبي من كل غلٍ وحقدٍ وحسد وكبر";
+                    weatherText.textContent = "Allahumma Tahhir Qalbee min kulli suu, Allahumma Tahhir Qalbee min kulli maa yubaGGiDuk. Allahumma Tahhir Qalbee min kulli Gillin wa HiQdin wa Hasadin wa kibr.";
+                    weatherText1.textContent = "Oh Allah, clean away all forms of evil from my heart. Oh Allah, clean my heart and remove everything that displeases you. Oh Allah, clean my heart of all every form of bitterness, hard feelings, and jealousy.";
+                    break;
+                case "irritated":
+                    weatherHeading.textContent = "No Hard Feelings";
+                    weatherText0.textContent = "اللهم طهر قلبي من كل سوء ، اللهم طهر قلبي من كل ما يبغضك، اللهم طهر قلبي من كل غلٍ وحقدٍ وحسد وكبر";
+                    weatherText.textContent = "Allahumma Tahhir Qalbee min kulli suu, Allahumma Tahhir Qalbee min kulli maa yubaGGiDuk. Allahumma Tahhir Qalbee min kulli Gillin wa HiQdin wa Hasadin wa kibr.";
+                    weatherText1.textContent = "Oh Allah, clean away all forms of evil from my heart. Oh Allah, clean my heart and remove everything that displeases you. Oh Allah, clean my heart of all every form of bitterness, hard feelings, and jealousy.";
+                    break;
+                case "envious":
+                    weatherHeading.textContent = "No Hard Feelings";
+                    weatherText0.textContent = "اللهم طهر قلبي من كل سوء ، اللهم طهر قلبي من كل ما يبغضك، اللهم طهر قلبي من كل غلٍ وحقدٍ وحسد وكبر";
+                    weatherText.textContent = "Allahumma Tahhir Qalbee min kulli suu, Allahumma Tahhir Qalbee min kulli maa yubaGGiDuk. Allahumma Tahhir Qalbee min kulli Gillin wa HiQdin wa Hasadin wa kibr.";
+                    weatherText1.textContent = "Oh Allah, clean away all forms of evil from my heart. Oh Allah, clean my heart and remove everything that displeases you. Oh Allah, clean my heart of all every form of bitterness, hard feelings, and jealousy.";
+                    break;
+                case "love":
+                    weatherHeading.textContent = "Matchmaking (For Her)";
+                    weatherText0.textContent = "اللهم اجعلني من الطيبات وارزقني الطيبين";
+                    weatherText.textContent = "Allahumma Ij3alnee min AlTayyibaat wa Urzuqnee min alTayyibeen";
+                    weatherText1.textContent = "Oh Allah make me from amongst the pure women and grant me from the pure men.";
+                    break;
+                case "impatient":
+                    weatherHeading.textContent = "The Courage to Step Forward";
+                    weatherText0.textContent = "اللهم امنحني القوة لأقاوم نفسي، والشجاعة لأواجه ضعفي، واليقين لأتقبل قدري، والرضا ليرتاح عقلي، والفهم ليطمئن قلبي";
+                    weatherText.textContent = "Allahumma imnaHnee alQuwwah li aQwaami nafseee, wa ash-Shujaa3ah li uwaajih da3fee, wa alYaqeeni li ataQabbal qadree, wa ar-riDaa li yartaah 3aQalee, wa alfahm li yaTmainna Qalbee";
+                    weatherText1.textContent = "Oh Allah! Grant me the strength to oppose myself, the courage to face my weakness, the conviction to accept my faith, the satisfaction of to relax my mind, and the understanding to reassure my heart.";
+                    break;
+                case "determined":
+                    weatherHeading.textContent = "The Courage to Step Forward";
+                    weatherText0.textContent = "اللهم امنحني القوة لأقاوم نفسي، والشجاعة لأواجه ضعفي، واليقين لأتقبل قدري، والرضا ليرتاح عقلي، والفهم ليطمئن قلبي";
+                    weatherText.textContent = "Allahumma imnaHnee alQuwwah li aQwaami nafseee, wa ash-Shujaa3ah li uwaajih da3fee, wa alYaqeeni li ataQabbal qadree, wa ar-riDaa li yartaah 3aQalee, wa alfahm li yaTmainna Qalbee";
+                    weatherText1.textContent = "Oh Allah! Grant me the strength to oppose myself, the courage to face my weakness, the conviction to accept my faith, the satisfaction of to relax my mind, and the understanding to reassure my heart.";
+                    break;
+                case "uneasy":
+                    weatherHeading.textContent = "Satisfaction Rain";
+                    weatherText0.textContent = "اللهم أنزِل عليّ سكينة من عندك تشرح بها صدري و تحفظُ بها قلبي";
+                    weatherText.textContent = "Allahumma Anzil 3alay sakeenah min 3ndik tashraH bihaa Sadree wa tahfDH bihaa qalbee";
+                    weatherText1.textContent = "Oh Allah, descend upon me satisfaction that comes from you and open my chest and protect my heart with it.";
+                    break;
+                case "grateful":
+                    weatherHeading.textContent = "How to Thank";
+                    weatherText0.textContent =" اللهم إن شكرك نعمة، تستحق الشكر، فعلّمني كيف أشكرك ، الحمد لله كما ينبغى لجلال وجهك وعظيم سلطانك";
+                    weatherText.textContent = "Allahumma, inna shukruka ni3mah. TastaHiq ash-Shukr, fa 3allimanee kayfa ashkuruk. AlHamdulillah kamaa yambaGee li jalaal wajhik wa aZHeemi sulTaanik.";
+                    weatherText1.textContent = "Oh Allah thanking you is a blessing, you deserve all thankfulness. All praise is due to Allah the way He should his magnificence deserves to be praised. .";
+                    break;
+
+                // Add cases for other emotions
+                default:
+                    weatherSection.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
